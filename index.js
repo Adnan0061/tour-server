@@ -67,16 +67,16 @@ async function run() {
       res.send(orders)
     })
 
-    //get single Order API
-    app.get('/order/:id', async (req, res) => {
-      const id = req.params.id  
-      // console.log('getting specific service', id)
-      const query = { _id: ObjectId(id)};
-      const order = await tourscollection.findOne(query);
-      res.json(order);
-      console.log(order);
+    // //get single Order API
+    // app.get('/order/:id', async (req, res) => {
+    //   const id = req.params.id  
+    //   // console.log('getting specific service', id)
+    //   const query = { _id: ObjectId(id)};
+    //   const order = await tourscollection.findOne(query);
+    //   res.json(order);
+    //   console.log(order);
 
-    })
+    // })
 
     //Delete Order API
     app.delete('/order/:id', async (req, res) => {
